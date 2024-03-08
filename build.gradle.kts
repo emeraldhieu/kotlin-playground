@@ -18,12 +18,17 @@ repositories {
 	mavenCentral()
 }
 
+val jacksonVersion = "2.16.1"
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 	implementation("org.modelmapper:modelmapper:3.2.0")
+	implementation("com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:${jacksonVersion}")
+
 }
 
 tasks.withType<KotlinCompile> {
